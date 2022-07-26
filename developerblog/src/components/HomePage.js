@@ -1,10 +1,11 @@
 import React, {useState, useEffect}from "react";
+import Mojo from "./Mojo";
 import NewPostForm from "./NewPostForm"
 
 
 function HomePage(){
     const [blogPost, setBlogPost]=useState([]);
-    // const [newBlogPost, setNewBlogPost]=UseState()
+    const [newBlogPost, setNewBlogPost]=useState([])
 
     useEffect(()=>{
         fetch('http://localhost:2000/posts')
@@ -14,7 +15,8 @@ function HomePage(){
 
     function handleAddItem(newData){
         setBlogPost([...blogPost, newData])
-        console.log(blogPost)
+
+        console.log(newData)
     }
     
     
@@ -31,7 +33,7 @@ function HomePage(){
                 </div>
             )
         })}
-        <NewPostForm onAddItem={handleAddItem}/>
+        <Mojo onAddItem={handleAddItem}/>
         
      </div>
 
