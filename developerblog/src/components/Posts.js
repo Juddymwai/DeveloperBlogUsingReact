@@ -10,11 +10,12 @@ function Posts(){
 
             </label>
             <label>
-            Title:
-                <input type="text" title="title" value={title} onChange={(e)=>setTitle(e.target.value)}/>
+            Content:
+                <input type="text" content="content" value={content} onChange={(e)=>setContent(e.target.value)}/>
 
             </label>
 
         </form>
     )
 }
+export default Posts
