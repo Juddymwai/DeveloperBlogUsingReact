@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import HomePage from "./HomePage";
 import Login from "./Login";
 import Navbar from "./Navbar";
-import {Routes, Route} from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 // import Posts from "./Posts";
 
 
@@ -16,21 +16,27 @@ function App(){
         .then((data)=> console.log(data))
     })
     return(
-        <div>
-           
-            <Navbar/>
-            <HomePage/>
-            <Login/>
+        <Router>
+
+            <div>
+
+                <Navbar/>
+
+            </div>
+        
             <Routes>
-                <Route exact path='/' >{HomePage}</Route>
+
+                <Route exact path='/' element={<HomePage/> }></Route>
                 {/* <Route  exact path='/posts'>{Posts}</Route> */}
-                <Route exact path='/login'>{Login}</Route>
+                <Route exact path='/login' element={<Login/> }></Route>
                 
-            </Routes>
+            </Routes>      
+        </Router>
+
 
 
             
-        </div>
+        
 
     )
 }

@@ -4,8 +4,7 @@ function Login (){
     return(
         <div>
             <h3>Login Page</h3>
-            <h1>Login</h1>
-
+            
             <form>
 
                 <div>
