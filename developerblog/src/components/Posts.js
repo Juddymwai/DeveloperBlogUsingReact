@@ -14,6 +14,12 @@ function Posts(){
                 <input type="text" content="content" value={content} onChange={(e)=>setContent(e.target.value)}/>
 
             </label>
+            <label>
+            Author:
+                <input type="text" author="author" value={author} onChange={(e)=>setAuthor(e.target.value)}/>
+            </label>
+            <button type="submit">Submit New Post</button>
+           
 
         </form>
     )
