@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import HomePage from "./HomePage";
 import Login from "./Login";
 import Navbar from "./Navbar";
@@ -23,7 +23,7 @@ function App(){
             <Login/>
             <Routes>
                 <Route exact path='/' >{HomePage}</Route>
-                <Route  exact path='/posts'>{Posts}</Route>
+                {/* <Route  exact path='/posts'>{Posts}</Route> */}
                 <Route exact path='/login'>{Login}</Route>
                 
             </Routes>
