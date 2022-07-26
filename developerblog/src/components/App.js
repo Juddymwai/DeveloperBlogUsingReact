@@ -1,6 +1,7 @@
 import React from "react";
 import HomePage from "./HomePage";
 import Login from "./Login";
+// import Posts from "./Posts";
 
 
 
@@ -9,6 +10,7 @@ function App(){
         <div>
             <HomePage/>
             <Login/>
+            
         </div>
 
     )
