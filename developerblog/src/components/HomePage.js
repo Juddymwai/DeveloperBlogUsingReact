@@ -1,9 +1,12 @@
 import React from "react";
 
-// create a new post
+
 function HomePage(){
+ 
+
     return (
         <div>
+            <h1>HomePage</h1>
             
         </div>
     )
