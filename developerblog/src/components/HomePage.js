@@ -1,8 +1,10 @@
 import React, {useState, useEffect}from "react";
+import NewPostForm from "./NewPostForm"
 
 
-function HomePage({}){
+function HomePage(){
     const [blogPost, setBlogPost]=useState([]);
+    // const [newBlogPost, setNewBlogPost]=UseState()
 
     useEffect(()=>{
         fetch('http://localhost:2000/posts')
@@ -10,7 +12,10 @@ function HomePage({}){
         .then((data)=> setBlogPost(data))
     }, [])
 
-    
+    function handleAddItem(newData){
+        setBlogPost([...blogPost, newData])
+        console.log(blogPost)
+    }
     
     
 
@@ -26,6 +31,8 @@ function HomePage({}){
                 </div>
             )
         })}
+        <NewPostForm onAddItem={handleAddItem}/>
+        
      </div>
 
     )
