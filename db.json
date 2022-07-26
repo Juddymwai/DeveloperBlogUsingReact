@@ -1,0 +1,34 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "Title": "String Cheese",
+        "Content": "Dairy",
+        "Author": "Jay Smith"
+      },
+      {
+        "id": 2,
+        "Title": "String Cheese",
+        "Content": "Dairy",
+        "Author": "Bridgit Makena"
+      },
+      {
+        "id": 3,
+        "Title": "String Cheese",
+        "Content": "Dairy",
+        "Author": "Judy Mwai"
+      },
+      {
+        "id": 4,
+        "Title": "String Cheese",
+        "Content": "Dairy",
+        "Author": "Kayleigh Rush"
+      },
+      {
+        "id": 5,
+        "Title": "String Cheese",
+        "Content": "Dairy",
+        "Author": "Terrence William"
+      }
+    ]
+  }
