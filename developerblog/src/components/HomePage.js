@@ -8,12 +8,12 @@ function HomePage(){
     const [newBlogPost, setNewBlogPost]=useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:2000/posts')
+        fetch('http://localhost:4000/posts')
         .then((r)=> r.json())
         .then((data)=> setBlogPost(data))
     }, [])
 
-    function handleAddItem(newData){
+    function handleAddPost(newData){
         setBlogPost([...blogPost, newData])
 
         console.log(newData)
@@ -23,7 +23,7 @@ function HomePage(){
 
     return (
      <div>
-        <h1>Blogs</h1>
+        <h1>Blogs </h1>
         {blogPost.map((post) => {
             return (
                 <div style={{marginBottom: 50+"px"}}>
@@ -33,7 +33,7 @@ function HomePage(){
                 </div>
             )
         })}
-        <Mojo onAddItem={handleAddItem}/>
+        <Mojo onHandleAddPost={handleAddPost}/>
         
      </div>
 
